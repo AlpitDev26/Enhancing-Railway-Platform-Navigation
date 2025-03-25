@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/map_container"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="#f0f0f0"></FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingRight="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Start Location : "
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                    <TextView
+                        android:id="@+id/start_location_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:background="#ffffff"
+                        android:text="Not Selected"
+                        android:textSize="16sp"
+                        android:textColor="#333333"
+                        android:singleLine="true"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="End Location :"
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                    <TextView
+                        android:id="@+id/end_location_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:background="#ffffff"
+                        android:text="Not Selected"
+                        android:textSize="16sp"
+                        android:textColor="#333333"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="Ticket Counter"
+                android:hint="Search for Locations"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:singleLine="true"
+                android:layout_marginBottom="20dp"/>
+
+            <ListView
+                android:id="@+id/search_results"
+                android:layout_width="188dp"
+                android:layout_height="127dp"
+                android:layout_marginBottom="20dp"
+                android:background="#ffffff"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/start_navigation_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Navigation"
+                android:textSize="18sp"
+                android:textColor="#ffffff"
+                android:background="#007bff"
+                android:textAllCaps="false"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:radius="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Route :"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/route_display_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="#ffffff"
+                android:text="No Route Selected"
+                android:textSize="16sp"
+                android:textColor="#666666"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
